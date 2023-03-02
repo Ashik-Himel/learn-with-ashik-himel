@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;600&family=Tiro+Bangla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;1000;600&family=Tiro+Bangla&display=swap');
 :root {
     --primary-color: #EA2027;
     --body-color: #ffffff;
@@ -14,7 +14,7 @@
     --body-weight: 400;
     --hero-weight: 400;
     --title-weight: 600;
-    --link-weight: 500;
+    --link-weight: 1000;
 }
 * {
     padding: 0;
@@ -85,7 +85,7 @@ label {
     padding: 0.8rem;
     border-radius: 5px;
     width: 100%;
-    max-width: 500px;
+    max-width: 1000px;
     margin-bottom: 1rem;
     border: none;
     outline: none;
@@ -350,12 +350,12 @@ iframe {
 }
 .contact-section iframe {
     width: 100%;
-    height: 500px;
+    height: 1000px;
     border-radius: 10px;
 }
 form .flex {
     gap: 1rem;
-    max-width: 500px;
+    max-width: 1000px;
 }
 
 /* Footer Section */
@@ -526,7 +526,7 @@ form .flex {
 /* Erollment Deadline Popup */
 .deadline-popup {
     width: calc(100% - 2rem);
-    max-width: 500px;
+    max-width: 1000px;
     padding: 1.5rem 3rem;
     margin: 0.5rem 1rem 1rem 1rem;
     border-radius: 10px;
@@ -560,7 +560,7 @@ form .flex {
     overflow: hidden;
 }
 .payment-line-flex {
-    max-width: 500px;
+    max-width: 1000px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -611,7 +611,7 @@ form .flex {
     border-radius: 10px;
 }
 .enroll-confirm .enroll-box > * {
-    max-width: 500px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 .enroll-confirm .enroll-box h2 {
@@ -626,7 +626,7 @@ form .flex {
     margin-bottom: 1rem;
 }
 .enroll-confirm .textarea-box {
-    max-width: 500px;
+    max-width: 1000px;
 }
 .enroll-box .choose-payment {
     max-width: 400px;

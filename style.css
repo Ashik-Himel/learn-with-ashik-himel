@@ -1,0 +1,761 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;600&family=Tiro+Bangla&display=swap');
+:root {
+    --primary-color: #EA2027;
+    --body-color: #ffffff;
+    --hero-color: var(--body-color);
+    --title-color: var(--primary-color);
+    --body-bg-color: #1B1464;
+    --alt-bg-color: #3F0071;
+
+    --body-font: 'Poppins', sans-serif;
+    --hero-font: 'Lobster', cursive;
+    --title-font: var(--body-font);
+    --bangla-font: 'Tiro Bangla', serif;
+    --body-weight: 400;
+    --hero-weight: 400;
+    --title-weight: 600;
+    --link-weight: 500;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::selection {
+    background-color: var(--primary-color);
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--body-bg-color);
+    color: var(--body-color);
+    font-family: var(--body-font);
+    font-weight: var(--body-weight);
+}
+h1 {
+    color: var(--hero-color);
+    font-family: var(--hero-font);
+    font-weight: var(--hero-weight);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+h2, h3 {
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-weight: var(--title-weight);
+}
+p {
+    margin-bottom: 2rem;
+}
+a {
+    color: var(--body-color);
+    text-decoration: none;
+    font-weight: var(--link-weight);
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+ul {
+    list-style-type: none;
+}
+section {
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+[type="text"], [type="email"], [type="tel"], textarea {
+    display: block;
+    font-family: inherit;
+    background-color: white;
+    color: black;
+    padding: 0.8rem;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1rem;
+    border: none;
+    outline: none;
+}
+[type="submit"] {
+    font-family: inherit;
+    font-size: 1rem;
+}
+textarea {
+    height: 120px;
+    resize: none;
+}
+iframe {
+    border: none;
+}
+
+/* Utility Classes */
+.colored-text {
+    color: var(--primary-color) !important;
+}
+.bangla-font {
+    font-family: var(--bangla-font);
+    font-weight: var(--body-weight);
+    font-size: 1.1rem;
+}
+.english-font {
+    font-family: var(--body-font);
+    font-weight: var(--body-weight);
+    font-size: 1rem;
+}
+.btn-group {
+    display: flex;
+    gap: 1.5rem;
+}
+.animation-fix {
+    width: 100%;
+    overflow: hidden;
+}
+.header-bg-none {
+    background: none !important;
+}
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 8px 20px;
+    border: 3px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-alt {
+    background-color: transparent;
+    color: var(--primary-color) !important;
+}
+.btn .fa-arrow-right {
+    margin-left: 0.3rem;
+}
+.btn .fa-arrow-left, .btn .fa-user {
+    margin-right: 0.3rem;
+}
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+.card {
+    background-color: white;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+.card img {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.flex > * {
+    flex: 1;
+    width: 100%;
+}
+.flex img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+.container {
+    width: 100%;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+    .container {width: 740px;}
+}
+@media screen and (min-width: 992px) {
+    .container {width: 960px;}
+}
+@media screen and (min-width: 1200px) {
+    .container {width: 1170px;}
+}
+@media screen and (min-width: 1400px) {
+    .container {width: 1340px;}
+}
+
+/* Header Section */
+.header-section {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 80%, var(--body-bg-color)), linear-gradient(to right, var(--body-bg-color) 40%, transparent), url(/images/hero-bg.png) top right / 1000px no-repeat;
+    color: white;
+}
+.nav-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: transparent;
+    color: var(--body-color);
+}
+.nav-section .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--body-color);
+    font-size: 1.5rem;
+}
+.nav-section .logo img {
+    max-width: 60px;
+    height: auto;
+}
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.nav-section .btn {
+    padding: 5px 10px;
+}
+.nav-section i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: none;
+}
+.nav-section .nav i {
+    font-size: 2.2rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+.hero-section {
+    padding: 7.5rem 0;
+    max-width: 700px;
+}
+
+/* Popular Courses */
+.courses-section {
+    text-align: center;
+}
+.courses-section h2 {
+    margin-bottom: 0;
+}
+.courses-slide-arrows {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.courses-slide-arrows h3 {
+    font-size: 1.5rem;
+}
+.courses-slide-arrows h3::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 11px;
+    width: 120px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+.courses-slide-arrows .arrows {
+    display: flex;
+    gap: 1rem;
+}
+.courses-slide-arrows .arrows > * {
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+.courses-section .card {
+    color: black;
+    text-align: left;
+}
+.courses-section .card img {
+    padding: 2rem 4.5rem;
+    background-color: #1D3F5B;
+}
+.courses-section .card h3 {
+    color: black;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+}
+.courses-section .rating-box {
+    color: #FDCC0D;
+    margin-left: 1rem;
+    margin-bottom: 0.2rem;
+}
+.courses-section .card span {
+    color: var(--alt-bg-color);
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+.courses-section .card .btn {
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+.courses-section .container > a {
+    margin-top: 2rem;
+}
+
+/* Instructor Section */
+.instructor-section h2 {
+    margin-bottom: 0;
+}
+.instructor-section * {
+    text-align: center;
+}
+.instructor-section h3 {
+    color: black;
+    margin: 0.5rem 0;
+}
+.instructor-section span {
+    display: block;
+    color: gray;
+}
+.instructor-section .icon-group {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+.instructor-section .icon-group img {
+    width: 2rem;
+}
+
+/* Contact Section */
+.contact-section > .flex {
+    gap: 4rem;
+}
+.contact-section iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+form .flex {
+    gap: 1rem;
+    max-width: 500px;
+}
+
+/* Footer Section */
+.footer-section {
+    margin-top: 2rem;
+}
+.footer-section .pre-footer {
+    background-color: var(--alt-bg-color);
+    padding: 3rem 0;
+}
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-flex > * {
+    flex: 1;
+    width: 100%;
+}
+.footer-flex h3 {
+    font-size: 1.5rem;
+}
+.footer-flex ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Response - Thanks Section */
+.thanks-section {
+    margin-top: 30px;
+    text-align: center;
+}
+.thanks-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.thanks-box span {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+/* Contact - Social Contact */
+.social-contact .container > div {
+    text-align: center;
+    overflow: hidden;
+}
+.social-contact .contact-icons {
+    display: inline-block;
+    position: relative;
+}
+.contact-icons::before, .contact-icons::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: var(--body-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.contact-icons::before {
+    right: calc(100% + 1.5rem);
+}
+.contact-icons::after {
+    left: calc(100% + 1.5rem);
+}
+.contact-icons .icon-flex {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 2rem;
+}
+.contact-icons .icon-flex img {
+    width: 2.5rem;
+}
+
+/* Python - Python Section */
+.deadline-timer > span {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.deadline-timer .timer {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+.deadline-timer .timer > span {
+    display: inline-block;
+    background-color: var(--primary-color);
+    padding: 0.7rem 1.5rem;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+}
+.python-section h2 {
+    margin-top: 2rem;
+}
+.python-section .course-info span {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.python-section .FAQs-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.python-section .FAQs-section p {
+    margin-bottom: 0;
+}
+.python-section .FAQs-section ul {
+    list-style-type: disclosure-closed;
+    list-style-position: inside;
+}
+.python-section .btn {
+    margin-top: 2rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.python-section .FAQs {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: none;
+}
+.python-section .FAQs div [class*="ques"] {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+.python-section .FAQs div [class*="ques"]::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078";
+    display: inline-block;
+    position: relative;
+    left: 10px;
+    transform: rotate(0);
+    transition: transform 0.3s;
+}
+.python-section .FAQs > div.active [class*="ques"]::after{
+    transform: rotate(-180deg);
+}
+.python-section .FAQs [class*="ans"] {
+    height: 0;
+    padding: 0;
+    border-bottom: none;
+    overflow: hidden;
+}
+.python-section .FAQs > div.active [class*="ans"] {
+    height: auto;
+    padding: 1rem;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Erollment Deadline Popup */
+.deadline-popup {
+    width: calc(100% - 2rem);
+    max-width: 500px;
+    padding: 1.5rem 3rem;
+    margin: 0.5rem 1rem 1rem 1rem;
+    border-radius: 10px;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: -100%;
+    left: calc(50% - 1rem);
+    transform: translateX(-50%);
+    transition: top 0.3s ease;
+}
+.deadline-popup.active {
+    top: 0;
+}
+.deadline-popup h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.deadline-popup p {
+    margin-bottom: 1rem;
+}
+.deadline-popup .btn {
+    position: relative;
+    left: calc(100% - 92px);
+}
+
+/* Enrollment Confirmation */
+.enroll-confirm form {
+    overflow: hidden;
+}
+.payment-line-flex {
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.payment-line-flex > * {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.enroll-confirm .btn-group {
+    justify-content: center;
+}
+.enroll-confirm .btn-alt {
+    border-color: white;
+    color: white !important;
+}
+.enroll-confirm .page-1-area {
+    position: absolute;
+    left: -100%;
+    top: 2rem;
+    display: none;
+}
+.enroll-confirm .page-2-area {
+    position: absolute;
+    right: -100%;
+    top: 2rem;
+    display: none;
+}
+.enroll-confirm .page-1-area.active {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+}
+.enroll-confirm .page-2-area.active {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+}
+.enroll-confirm .enroll-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+}
+.enroll-confirm .enroll-box > * {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.enroll-confirm .enroll-box h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.enroll-confirm .enroll-box p {
+    margin-bottom: 1rem;
+}
+.enroll-confirm .enroll-box > span {
+    display: block;
+    margin-bottom: 1rem;
+}
+.enroll-confirm .textarea-box {
+    max-width: 500px;
+}
+.enroll-box .choose-payment {
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.enroll-box .choose-payment > * {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+.enroll-box .choose-payment label {
+    display: inline-block;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+.enroll-box .choose-payment label img {
+    border-radius: inherit;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.enroll-box .choose-payment .rocket-box label {
+    background-color: #8c3494;
+}
+
+/* Media Queries */
+@media screen and (max-width: 992px) {
+    .flex img {
+        max-width: 350px;
+    }
+    .header-section {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 60%, var(--body-bg-color)), url(/images/hero-bg.png) top center / cover no-repeat;
+    color: white;
+    }
+}
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+    section {
+        padding: 2rem 0;
+    }
+    .flex {
+        flex-direction: column;
+    }
+    .flex img {
+        max-width: 400px;
+    }
+    .nav-section .logo {
+        gap: 0.5rem;
+        font-size: 1.4rem;
+    }
+    .nav-section .logo img {
+        max-width: 40px;
+    }
+    .nav-section i {
+        display: block;
+    }
+    .nav-section .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        width: 80%;
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: right 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-left: 2px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        z-index: 10;
+    }
+    .nav-section .nav.active {
+        right: 0;
+    }
+    .nav-section .nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: 1.5rem;
+    }
+    .nav-section .nav a {
+        color: var(--body-color);
+    }
+    .hero-section {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+    .about-courses .flex {
+        flex-direction: column-reverse;
+    }
+    .courses-slide-arrows {
+        display: flex;
+    }
+    .courses-section .card-section {
+        margin-top: 1rem;
+    }
+    .courses-page-section .card-section {
+        margin-top: 2rem;
+    }
+    .contact-section > .flex {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    form .flex {
+        gap: 0;
+    }
+    .contact-section iframe {
+        height: 320px;
+    }
+    .footer-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem;
+    }
+    .enroll-confirm .enroll-box {
+        padding: 1rem;
+    }
+    .enroll-box .choose-payment label {
+        padding: 0;
+    }
+}

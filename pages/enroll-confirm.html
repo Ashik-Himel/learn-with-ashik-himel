@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Confirmation :: Learn with Ashik-Himel</title>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<!-- Enrollment Confirmation -->
+<section class="enroll-confirm">
+    <div class="container">
+        <form action="https://formsubmit.co/aaf71b51111d57eb494eb3ca0e5ca21c" method="POST">
+            <div class="enroll-box page-1-area active">
+                <h2>Your Information</h2>
+                <div class="flex">
+                    <div class="left-div">
+                        <label for="name">Your Name <span class="colored-text">*</span></label>
+                        <input type="text" name="name" id="name" placeholder="Write your name" required>
+                    </div>
+                    <div class="right-div">
+                        <label for="address">Your Address <span class="colored-text">*</span></label>
+                        <input type="text" name="address" id="address" placeholder="Write your address" required>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left-div">
+                        <label for="email">Your Email <span class="colored-text">*</span></label>
+                        <input type="email" name="email" id="email" placeholder="Write your email" required>
+                    </div>
+                    <div class="right-div">
+                        <label for="phone">Your Phone Number <span class="colored-text">*</span></label>
+                        <input type="tel" name="phone" id="phone" placeholder="Write your phone number" required>
+                    </div>
+                </div>
+                <div class="textarea-box">
+                    <label for="note">Your Note (Optional)</label>
+                    <textarea name="note" id="note" placeholder="Have any note? Write here..."></textarea>
+                </div>
+                <div class="btn-group">
+                    <a href="/courses/python.html" class="btn btn-alt"><i class="fa-solid fa-arrow-left"></i> Back</a>
+                    <a href="#" class="btn payment-next-btn">Next <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="enroll-box page-2-area">
+                <h2>Make Payment</h2>
+                <div class="bangla-font">
+                    <p>মোটঃ ৫০০ টাকা।</p>
+                    <p>নিম্নোক্ত মাধ্যমে তোমার <span class="english-font">Enrollment Fee</span> প্রদান করতে হবেঃ</p>
+                </div>
+                <div class="choose-payment">
+                    <div class="bkash-box">
+                        <input type="radio" name="payment-option" id="bkash" value="bkash" required>
+                        <label for="bkash"><img src="/images/icons/bkash.png" alt="bKash Icon"></label>
+                    </div>
+                    <div class="rocket-box">
+                        <input type="radio" name="payment-option" id="rocket" value="rocket" required>
+                        <label for="rocket"><img src="/images/icons/rocket.png" alt="Rocket Icon"></label>
+                    </div>
+                    <div class="nagad-box">
+                        <input type="radio" name="payment-option" id="nagad" value="nagad" required>
+                        <label for="nagad"><img src="/images/icons/nagad.png" alt="Nagad Icon"></label>
+                    </div>
+                </div>
+                <p class="bangla-font for-bkash">তোমার মোবাইলের বিকাশে/রকেট/নগদে প্রবেশ করে <span class="english-font">"Send Money"</span> অপশনে গিয়ে নিম্নোক্ত নাম্বারে মোট টাকা <span class="english-font">"Send Money"</span> করো। তারপর নিচে তোমার বিকাশ/রকেট/নগদ নাম্বার ও ট্রানজিকশন আইডি দিয়ে <span class="english-font">Submit</span> বাটনে ক্লিক করো।</p>
+                <span class="english-font">bKash/Rocket/Nagad Personal: 01770473899</span>
+                <div class="flex">
+                    <div class="left-div">
+                        <label for="payment-number">Your Number <span class="colored-text">*</span></label>
+                        <input type="tel" name="payment-number" id="payment-number" placeholder="Write your Bkash/Rocket/Nagad Number" required>
+                    </div>
+                    <div class="right-div">
+                        <label for="trans-id">Transection ID <span class="colored-text">*</span></label>
+                        <input type="text" name="trans-id" id="trans-id" placeholder="Write Transection ID" required>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-alt payment-next-btn-2"><i class="fa-solid fa-arrow-left"></i> Prev</a>
+                    <button type="submit" class="btn payment-btn">Submit <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <input type="hidden" name="_subject" value="Payment from Learn with Ashik-Himel!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://learn-with-ashik-himel.netlify.app/pages/response.html">
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Custom JS -->
+<script src="enroll-confirm.js"></script>
+<script src="form.js"></script>
+</body>
+</html>
